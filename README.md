@@ -16,7 +16,8 @@ This pipeline reflects real-world metabarcoding analysis used in research and bi
 ## 🛠 Tools
 - QIIME2  
 - DADA2  
-- Cutadapt  
+- Cutadapt
+- Python
 - R for visualization  
 
 ## 🌍 Applications
