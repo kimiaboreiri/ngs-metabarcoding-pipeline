@@ -27,3 +27,4 @@ This pipeline reflects real-world metabarcoding analysis used in research and bi
 
 ##  Note
 A metadata template is provided here. Please fill it in according to your sample names and negative blanks.
+This pipeline was tested on Fox River vertebrate and mussel metabarcoding data for biodiversity analysis. Depending on your target species, you may need to build a specific reference database.
