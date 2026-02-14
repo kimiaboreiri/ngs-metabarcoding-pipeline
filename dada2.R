@@ -75,8 +75,7 @@ write.csv(seqtab.nochim,
 
 
 #SIMPLE DECONTAMINATION
-# ------------------------------
-# based on metadata: each sample has its own blanks
+
 
 metadata <- read.csv("metadata.csv",
                      stringsAsFactors = FALSE,
