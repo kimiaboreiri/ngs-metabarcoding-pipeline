@@ -2,9 +2,9 @@ import os
 import subprocess
 from glob import glob
 
-# =========================
+
 # PATHS
-# =========================
+
 raw_data = " "
 trimmed = "/mnt/c/Users/Kimia/Documents/fall/trimmed/trimmed"
 fastqc_out = "/mnt/c/Users/Kimia/Documents/fall/trimmed/trimmed/fastqc"
@@ -12,9 +12,9 @@ fastqc_out = "/mnt/c/Users/Kimia/Documents/fall/trimmed/trimmed/fastqc"
 os.makedirs(trimmed, exist_ok=True)
 os.makedirs(fastqc_out, exist_ok=True)
 '''
-# =========================
+
 # PRIMERS
-# =========================
+
 # step 1 – reverse-complement primers (3')
 RC_FORWARD = "CTAGAGGAGCCTGTTCTA"
 RC_REVERSE = "GGGGTATCTAATCCCAGT"
@@ -23,9 +23,9 @@ RC_REVERSE = "GGGGTATCTAATCCCAGT"
 FORWARD_PRIMER = "ACTGGGATTAGATACCCC"
 REVERSE_PRIMER = "TAGAACAGGCTCCTCTAG"
 
-# =========================
+
 # FIND FASTQ FILES
-# =========================
+=
 r1_files = sorted(
     glob(os.path.join(raw_data, "**", "*_R1_001.fastq.gz"), recursive=True)
 )
@@ -35,9 +35,9 @@ print(f"Found {len(r1_files)} R1 files")
 if len(r1_files) == 0:
     raise RuntimeError("No R1 FASTQ files found. Check paths.")
 
-# =========================
-# FASTQC (optional but safe)
-# =========================
+
+# FASTQC 
+
 print("Running FastQC...")
 for fq in glob(os.path.join(raw_data, "**", "*.fastq.gz"), recursive=True):
     subprocess.run(
@@ -45,9 +45,9 @@ for fq in glob(os.path.join(raw_data, "**", "*.fastq.gz"), recursive=True):
         check=True
     )
 
-# =========================
+
 # CUTADAPT
-# =========================
+
 print("Running cutadapt...")
 
 for r1 in r1_files:
@@ -92,10 +92,11 @@ for r1 in r1_files:
     os.remove(step1_r1)
     os.remove(step1_r2)
 '''
-# =========================
+
 # RUN DADA2
-# =========================
+
 print("Running DADA2...")
 subprocess.run(["Rscript", "dada2.R"], check=True)
 
-print("Pipeline finished successfully ✅")
+print("Pipeline finished successfully ")
+
