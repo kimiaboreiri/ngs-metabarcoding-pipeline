@@ -2,28 +2,28 @@
 
 This repository presents a metabarcoding and eDNA bioinformatics workflow for biodiversity assessment using next-generation sequencing (NGS) data.
 
-## 🔬 Project Overview
+##  Project Overview
 Metabarcoding uses marker-gene sequencing to detect species from environmental DNA (eDNA).  
 This pipeline reflects real-world metabarcoding analysis used in research and biodiversity monitoring.
 
-## 🧪 Workflow
+##  Workflow
 - Quality control of FASTQ files  
 - Adapter and primer trimming  
-- ASV/OTU generation  
+- ASV generation  
 - Taxonomic assignment  
 - Diversity analysis  
 
-## 🛠 Tools
+##  Tools
 - QIIME2  
 - DADA2  
 - Cutadapt
 - Python
 - R for visualization  
 
-## 🌍 Applications
+##  Applications
 - Biodiversity monitoring  
 - Environmental DNA studies  
 - Ecological research  
 
-## 💡 Note
-This repository showcases practical metabarcoding workflows commonly used in bioinformatics research.
+##  Note
+A metadata template is provided here. Please fill it in according to your sample names and negative blanks.
