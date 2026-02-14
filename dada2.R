@@ -82,7 +82,7 @@ metadata <- read.csv("metadata.csv",
                      stringsAsFactors = FALSE,
                      check.names = TRUE)
 
-# فقط sampleهایی که واقعاً در seqtab هستند
+#only seqtab nochim
 metadata <- metadata[metadata$Sample.ID %in% rownames(seqtab.nochim), ]
 
 cat("Running decontamination...\n")
